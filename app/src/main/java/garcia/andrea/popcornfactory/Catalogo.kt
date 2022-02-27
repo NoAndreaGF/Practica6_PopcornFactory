@@ -11,9 +11,8 @@ import android.widget.BaseAdapter
 import android.widget.GridView
 import android.widget.ImageView
 import android.widget.TextView
-import java.security.AccessControlContext
 
-class catalogo : AppCompatActivity() {
+class Catalogo : AppCompatActivity() {
 
     var peliculas:ArrayList<Pelicula> = ArrayList<Pelicula>()
 
@@ -78,13 +77,12 @@ class catalogo : AppCompatActivity() {
             imagen.setImageResource(pelicula.image)
             titulo.setText(pelicula.titulo)
 
-
             imagen.setOnClickListener() {
-                var intent = Intent(context,detalle_pelicula::class.java)
-                intent.putExtra("nombre", pelicula.titulo)
+                var intent = Intent(context,Detalle_pelicula::class.java)
+                intent.putExtra("titulo", pelicula.titulo)
                 intent.putExtra("image", pelicula.image)
                 intent.putExtra("header", pelicula.header)
-                intent.putExtra("sinopsis", pelicula.sipnosis)
+                intent.putExtra("sinopsis", pelicula.sinopsis)
 
                 context!!.startActivity(intent)
             }

@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 
-class detalle_pelicula : AppCompatActivity() {
+class Detalle_pelicula : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +22,7 @@ class detalle_pelicula : AppCompatActivity() {
         if (bundle != null) {
             ivPeliculaImagen.setImageResource(bundle.getInt("header"))
             tvNombrePelicula.setText(bundle.getString("titulo"))
-            tvPeliculaDesc.setText(bundle.getString("sipsonis"))
+            tvPeliculaDesc.setText(bundle.getString("sinopsis"))
         }
     }
 }
